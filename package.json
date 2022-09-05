@@ -4,7 +4,7 @@
   "description": "JS client for The Public Knowledge Workshop open-bus stride api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "generate": ".scripts/generate"
   },
   "author": "@iliakap",
   "license": "ISC",
