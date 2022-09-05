@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/iliakap/open-bus-stride-client/issues"
   },
-  "homepage": "https://github.com/iliakap/open-bus-stride-client#readme"
+  "homepage": "https://github.com/iliakap/open-bus-stride-client#readme",
+  "devDependencies": {
+    "openapi-typescript-codegen": "^0.23.0"
+  }
 }
