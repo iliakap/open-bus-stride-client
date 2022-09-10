@@ -2,7 +2,7 @@
 
 Source code for https://www.npmjs.com/package/open-bus-stride-client
 
-- Actual generatode client code is under `/lib` directory
+- Actual client code is under `/lib` directory
 - Generator code is under `/generator` directory
 
 To run the generator yourself
