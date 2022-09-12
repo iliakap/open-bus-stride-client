@@ -8,12 +8,12 @@ if [[ -z "$OUTDIR" ]]; then
 fi
 
 docker run --rm \
-  -v ${PWD}/lib:/local \
+  -v ${PWD}/${OUTDIR}:/local \
   openapitools/openapi-generator-cli:latest generate \
   -i https://open-bus-stride-api.hasadna.org.il/openapi.json \
   -g typescript-fetch \
   --git-user-id=iliakap --git-repo-id=open-bus-stride-client \
-  --additional-properties=npmName=${NPM_NAME},npmVersion=${NPM_VERSION},stringEnums=true \
+  --additional-properties=stringEnums=true \
   --remove-operation-id-prefix \
   -o /local/
 

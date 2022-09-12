@@ -1,4 +1,4 @@
-OUTDIR = lib
+OUTDIR = lib/openapi
 
 .PHONY: gen
 gen:
