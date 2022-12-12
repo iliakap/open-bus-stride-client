@@ -10,17 +10,22 @@
  * Do not edit the class manually.
  */
 /**
- * An enumeration.
+ *
  * @export
- * @enum {string}
+ * @interface StopArrivalPydanticModel
  */
-export declare enum SiriSnapshotEtlStatusEnum {
-    Pending = "pending",
-    Loading = "loading",
-    Loaded = "loaded",
-    Error = "error",
-    Deleted = "deleted"
+export interface StopArrivalPydanticModel {
+    /**
+     *
+     * @type {Date}
+     * @memberof StopArrivalPydanticModel
+     */
+    actualArrivalTime?: Date;
 }
-export declare function SiriSnapshotEtlStatusEnumFromJSON(json: any): SiriSnapshotEtlStatusEnum;
-export declare function SiriSnapshotEtlStatusEnumFromJSONTyped(json: any, ignoreDiscriminator: boolean): SiriSnapshotEtlStatusEnum;
-export declare function SiriSnapshotEtlStatusEnumToJSON(value?: SiriSnapshotEtlStatusEnum | null): any;
+/**
+ * Check if a given object implements the StopArrivalPydanticModel interface.
+ */
+export declare function instanceOfStopArrivalPydanticModel(value: object): boolean;
+export declare function StopArrivalPydanticModelFromJSON(json: any): StopArrivalPydanticModel;
+export declare function StopArrivalPydanticModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): StopArrivalPydanticModel;
+export declare function StopArrivalPydanticModelToJSON(value?: StopArrivalPydanticModel | null): any;

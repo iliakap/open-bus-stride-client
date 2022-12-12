@@ -19,4 +19,5 @@ export * from './SiriSnapshotPydanticModel';
 export * from './SiriStopPydanticModel';
 export * from './SiriVehicleLocationPydanticModel';
 export * from './SiriVehicleLocationWithRelatedPydanticModel';
+export * from './StopArrivalPydanticModel';
 export * from './ValidationError';

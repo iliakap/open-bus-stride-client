@@ -12,29 +12,54 @@
  * Do not edit the class manually.
  */
 
+import { exists, mapValues } from '../runtime';
 /**
- * An enumeration.
+ * 
  * @export
- * @enum {string}
+ * @interface StopArrivalPydanticModel
  */
-export enum SiriSnapshotEtlStatusEnum {
-    Pending = 'pending',
-    Loading = 'loading',
-    Loaded = 'loaded',
-    Error = 'error',
-    Deleted = 'deleted'
+export interface StopArrivalPydanticModel {
+    /**
+     * 
+     * @type {Date}
+     * @memberof StopArrivalPydanticModel
+     */
+    actualArrivalTime?: Date;
 }
 
+/**
+ * Check if a given object implements the StopArrivalPydanticModel interface.
+ */
+export function instanceOfStopArrivalPydanticModel(value: object): boolean {
+    let isInstance = true;
 
-export function SiriSnapshotEtlStatusEnumFromJSON(json: any): SiriSnapshotEtlStatusEnum {
-    return SiriSnapshotEtlStatusEnumFromJSONTyped(json, false);
+    return isInstance;
 }
 
-export function SiriSnapshotEtlStatusEnumFromJSONTyped(json: any, ignoreDiscriminator: boolean): SiriSnapshotEtlStatusEnum {
-    return json as SiriSnapshotEtlStatusEnum;
+export function StopArrivalPydanticModelFromJSON(json: any): StopArrivalPydanticModel {
+    return StopArrivalPydanticModelFromJSONTyped(json, false);
 }
 
-export function SiriSnapshotEtlStatusEnumToJSON(value?: SiriSnapshotEtlStatusEnum | null): any {
-    return value as any;
+export function StopArrivalPydanticModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): StopArrivalPydanticModel {
+    if ((json === undefined) || (json === null)) {
+        return json;
+    }
+    return {
+        
+        'actualArrivalTime': !exists(json, 'actual_arrival_time') ? undefined : (new Date(json['actual_arrival_time'])),
+    };
+}
+
+export function StopArrivalPydanticModelToJSON(value?: StopArrivalPydanticModel | null): any {
+    if (value === undefined) {
+        return undefined;
+    }
+    if (value === null) {
+        return null;
+    }
+    return {
+        
+        'actual_arrival_time': value.actualArrivalTime === undefined ? undefined : (value.actualArrivalTime.toISOString()),
+    };
 }
 
