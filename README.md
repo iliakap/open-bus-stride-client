@@ -10,6 +10,7 @@ To run the generator yourself
 - Make sure Docker is installed on your machine (follow [these steps](https://docs.docker.com/get-docker/) to install)
 - Run `make gen`
 - Fresh client is generated into `lib` :)
+- Publish client: `npm login && cd lib && npm publish`
 
 
 Enjoy
