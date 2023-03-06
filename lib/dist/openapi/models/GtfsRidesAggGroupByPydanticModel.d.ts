@@ -12,20 +12,50 @@
 /**
  *
  * @export
- * @interface StopArrivalPydanticModel
+ * @interface GtfsRidesAggGroupByPydanticModel
  */
-export interface StopArrivalPydanticModel {
+export interface GtfsRidesAggGroupByPydanticModel {
     /**
      *
      * @type {Date}
-     * @memberof StopArrivalPydanticModel
+     * @memberof GtfsRidesAggGroupByPydanticModel
      */
-    actualArrivalTime?: Date;
+    gtfsRouteDate?: Date;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRidesAggGroupByPydanticModel
+     */
+    operatorRef?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof GtfsRidesAggGroupByPydanticModel
+     */
+    dayOfWeek?: string;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRidesAggGroupByPydanticModel
+     */
+    totalRoutes: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRidesAggGroupByPydanticModel
+     */
+    totalPlannedRides: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRidesAggGroupByPydanticModel
+     */
+    totalActualRides: number;
 }
 /**
- * Check if a given object implements the StopArrivalPydanticModel interface.
+ * Check if a given object implements the GtfsRidesAggGroupByPydanticModel interface.
  */
-export declare function instanceOfStopArrivalPydanticModel(value: object): boolean;
-export declare function StopArrivalPydanticModelFromJSON(json: any): StopArrivalPydanticModel;
-export declare function StopArrivalPydanticModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): StopArrivalPydanticModel;
-export declare function StopArrivalPydanticModelToJSON(value?: StopArrivalPydanticModel | null): any;
+export declare function instanceOfGtfsRidesAggGroupByPydanticModel(value: object): boolean;
+export declare function GtfsRidesAggGroupByPydanticModelFromJSON(json: any): GtfsRidesAggGroupByPydanticModel;
+export declare function GtfsRidesAggGroupByPydanticModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): GtfsRidesAggGroupByPydanticModel;
+export declare function GtfsRidesAggGroupByPydanticModelToJSON(value?: GtfsRidesAggGroupByPydanticModel | null): any;

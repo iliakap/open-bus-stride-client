@@ -4,6 +4,8 @@ export * from './GtfsAgencyPydanticModel';
 export * from './GtfsRidePydanticModel';
 export * from './GtfsRideStopPydanticModel';
 export * from './GtfsRideWithRelatedPydanticModel';
+export * from './GtfsRidesAggGroupByPydanticModel';
+export * from './GtfsRidesAggPydanticModel';
 export * from './GtfsRoutePydanticModel';
 export * from './GtfsStopPydanticModel';
 export * from './HTTPValidationError';

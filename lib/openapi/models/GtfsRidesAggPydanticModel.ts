@@ -16,115 +16,74 @@ import { exists, mapValues } from '../runtime';
 /**
  * 
  * @export
- * @interface GtfsRoutePydanticModel
+ * @interface GtfsRidesAggPydanticModel
  */
-export interface GtfsRoutePydanticModel {
+export interface GtfsRidesAggPydanticModel {
     /**
      * 
      * @type {number}
-     * @memberof GtfsRoutePydanticModel
+     * @memberof GtfsRidesAggPydanticModel
      */
-    id: number;
+    gtfsRouteId: number;
     /**
      * 
      * @type {Date}
-     * @memberof GtfsRoutePydanticModel
+     * @memberof GtfsRidesAggPydanticModel
      */
-    date: Date;
+    gtfsRouteDate: Date;
     /**
      * 
      * @type {number}
-     * @memberof GtfsRoutePydanticModel
+     * @memberof GtfsRidesAggPydanticModel
      */
-    lineRef: number;
+    numPlannedRides: number;
     /**
      * 
      * @type {number}
-     * @memberof GtfsRoutePydanticModel
+     * @memberof GtfsRidesAggPydanticModel
+     */
+    numActualRides: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GtfsRidesAggPydanticModel
      */
     operatorRef: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof GtfsRoutePydanticModel
-     */
-    routeShortName?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof GtfsRoutePydanticModel
-     */
-    routeLongName?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof GtfsRoutePydanticModel
-     */
-    routeMkt?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof GtfsRoutePydanticModel
-     */
-    routeDirection?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof GtfsRoutePydanticModel
-     */
-    routeAlternative?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof GtfsRoutePydanticModel
-     */
-    agencyName?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof GtfsRoutePydanticModel
-     */
-    routeType?: string;
 }
 
 /**
- * Check if a given object implements the GtfsRoutePydanticModel interface.
+ * Check if a given object implements the GtfsRidesAggPydanticModel interface.
  */
-export function instanceOfGtfsRoutePydanticModel(value: object): boolean {
+export function instanceOfGtfsRidesAggPydanticModel(value: object): boolean {
     let isInstance = true;
-    isInstance = isInstance && "id" in value;
-    isInstance = isInstance && "date" in value;
-    isInstance = isInstance && "lineRef" in value;
+    isInstance = isInstance && "gtfsRouteId" in value;
+    isInstance = isInstance && "gtfsRouteDate" in value;
+    isInstance = isInstance && "numPlannedRides" in value;
+    isInstance = isInstance && "numActualRides" in value;
     isInstance = isInstance && "operatorRef" in value;
 
     return isInstance;
 }
 
-export function GtfsRoutePydanticModelFromJSON(json: any): GtfsRoutePydanticModel {
-    return GtfsRoutePydanticModelFromJSONTyped(json, false);
+export function GtfsRidesAggPydanticModelFromJSON(json: any): GtfsRidesAggPydanticModel {
+    return GtfsRidesAggPydanticModelFromJSONTyped(json, false);
 }
 
-export function GtfsRoutePydanticModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): GtfsRoutePydanticModel {
+export function GtfsRidesAggPydanticModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): GtfsRidesAggPydanticModel {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         
-        'id': json['id'],
-        'date': (new Date(json['date'])),
-        'lineRef': json['line_ref'],
+        'gtfsRouteId': json['gtfs_route_id'],
+        'gtfsRouteDate': (new Date(json['gtfs_route_date'])),
+        'numPlannedRides': json['num_planned_rides'],
+        'numActualRides': json['num_actual_rides'],
         'operatorRef': json['operator_ref'],
-        'routeShortName': !exists(json, 'route_short_name') ? undefined : json['route_short_name'],
-        'routeLongName': !exists(json, 'route_long_name') ? undefined : json['route_long_name'],
-        'routeMkt': !exists(json, 'route_mkt') ? undefined : json['route_mkt'],
-        'routeDirection': !exists(json, 'route_direction') ? undefined : json['route_direction'],
-        'routeAlternative': !exists(json, 'route_alternative') ? undefined : json['route_alternative'],
-        'agencyName': !exists(json, 'agency_name') ? undefined : json['agency_name'],
-        'routeType': !exists(json, 'route_type') ? undefined : json['route_type'],
     };
 }
 
-export function GtfsRoutePydanticModelToJSON(value?: GtfsRoutePydanticModel | null): any {
+export function GtfsRidesAggPydanticModelToJSON(value?: GtfsRidesAggPydanticModel | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -133,17 +92,11 @@ export function GtfsRoutePydanticModelToJSON(value?: GtfsRoutePydanticModel | nu
     }
     return {
         
-        'id': value.id,
-        'date': (value.date.toISOString().substr(0,10)),
-        'line_ref': value.lineRef,
+        'gtfs_route_id': value.gtfsRouteId,
+        'gtfs_route_date': (value.gtfsRouteDate.toISOString().substr(0,10)),
+        'num_planned_rides': value.numPlannedRides,
+        'num_actual_rides': value.numActualRides,
         'operator_ref': value.operatorRef,
-        'route_short_name': value.routeShortName,
-        'route_long_name': value.routeLongName,
-        'route_mkt': value.routeMkt,
-        'route_direction': value.routeDirection,
-        'route_alternative': value.routeAlternative,
-        'agency_name': value.agencyName,
-        'route_type': value.routeType,
     };
 }
 

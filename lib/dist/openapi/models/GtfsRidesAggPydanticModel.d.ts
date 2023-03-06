@@ -12,20 +12,44 @@
 /**
  *
  * @export
- * @interface StopArrivalPydanticModel
+ * @interface GtfsRidesAggPydanticModel
  */
-export interface StopArrivalPydanticModel {
+export interface GtfsRidesAggPydanticModel {
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRidesAggPydanticModel
+     */
+    gtfsRouteId: number;
     /**
      *
      * @type {Date}
-     * @memberof StopArrivalPydanticModel
+     * @memberof GtfsRidesAggPydanticModel
      */
-    actualArrivalTime?: Date;
+    gtfsRouteDate: Date;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRidesAggPydanticModel
+     */
+    numPlannedRides: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRidesAggPydanticModel
+     */
+    numActualRides: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRidesAggPydanticModel
+     */
+    operatorRef: number;
 }
 /**
- * Check if a given object implements the StopArrivalPydanticModel interface.
+ * Check if a given object implements the GtfsRidesAggPydanticModel interface.
  */
-export declare function instanceOfStopArrivalPydanticModel(value: object): boolean;
-export declare function StopArrivalPydanticModelFromJSON(json: any): StopArrivalPydanticModel;
-export declare function StopArrivalPydanticModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): StopArrivalPydanticModel;
-export declare function StopArrivalPydanticModelToJSON(value?: StopArrivalPydanticModel | null): any;
+export declare function instanceOfGtfsRidesAggPydanticModel(value: object): boolean;
+export declare function GtfsRidesAggPydanticModelFromJSON(json: any): GtfsRidesAggPydanticModel;
+export declare function GtfsRidesAggPydanticModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): GtfsRidesAggPydanticModel;
+export declare function GtfsRidesAggPydanticModelToJSON(value?: GtfsRidesAggPydanticModel | null): any;

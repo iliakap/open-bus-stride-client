@@ -9,23 +9,42 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-/**
- *
- * @export
- * @interface StopArrivalPydanticModel
- */
-export interface StopArrivalPydanticModel {
-    /**
-     *
-     * @type {Date}
-     * @memberof StopArrivalPydanticModel
-     */
-    actualArrivalTime?: Date;
+import * as runtime from '../runtime';
+import type { GtfsRidesAggGroupByPydanticModel, GtfsRidesAggPydanticModel } from '../models';
+export interface ByGtfsRidesAggGroupByGetRequest {
+    dateFrom: Date;
+    dateTo: Date;
+    groupBy: string;
+}
+export interface GtfsRidesAggListGetRequest {
+    dateFrom: Date;
+    dateTo: Date;
+    limit?: number;
+    offset?: number;
+    getCount?: boolean;
 }
 /**
- * Check if a given object implements the StopArrivalPydanticModel interface.
+ *
  */
-export declare function instanceOfStopArrivalPydanticModel(value: object): boolean;
-export declare function StopArrivalPydanticModelFromJSON(json: any): StopArrivalPydanticModel;
-export declare function StopArrivalPydanticModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): StopArrivalPydanticModel;
-export declare function StopArrivalPydanticModelToJSON(value?: StopArrivalPydanticModel | null): any;
+export declare class AggregationsApi extends runtime.BaseAPI {
+    /**
+     * gtfs rides aggregation grouped by given fields.
+     * Group By
+     */
+    byGtfsRidesAggGroupByGetRaw(requestParameters: ByGtfsRidesAggGroupByGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Array<GtfsRidesAggGroupByPydanticModel>>>;
+    /**
+     * gtfs rides aggregation grouped by given fields.
+     * Group By
+     */
+    byGtfsRidesAggGroupByGet(requestParameters: ByGtfsRidesAggGroupByGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<Array<GtfsRidesAggGroupByPydanticModel>>;
+    /**
+     * List of gtfs rides aggregations.
+     * List
+     */
+    gtfsRidesAggListGetRaw(requestParameters: GtfsRidesAggListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Array<GtfsRidesAggPydanticModel>>>;
+    /**
+     * List of gtfs rides aggregations.
+     * List
+     */
+    gtfsRidesAggListGet(requestParameters: GtfsRidesAggListGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<Array<GtfsRidesAggPydanticModel>>;
+}

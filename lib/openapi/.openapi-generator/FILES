@@ -1,3 +1,4 @@
+apis/AggregationsApi.ts
 apis/GtfsApi.ts
 apis/SiriApi.ts
 apis/UserCasesApi.ts
@@ -7,6 +8,8 @@ models/GtfsAgencyPydanticModel.ts
 models/GtfsRidePydanticModel.ts
 models/GtfsRideStopPydanticModel.ts
 models/GtfsRideWithRelatedPydanticModel.ts
+models/GtfsRidesAggGroupByPydanticModel.ts
+models/GtfsRidesAggPydanticModel.ts
 models/GtfsRoutePydanticModel.ts
 models/GtfsStopPydanticModel.ts
 models/HTTPValidationError.ts
