@@ -16,223 +16,223 @@ import { exists, mapValues } from '../runtime';
 /**
  * 
  * @export
- * @interface SiriRideWithRelatedPydanticModel
+ * @interface GtfsRideStopWithRelatedPydanticModel
  */
-export interface SiriRideWithRelatedPydanticModel {
+export interface GtfsRideStopWithRelatedPydanticModel {
     /**
      * 
      * @type {number}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     id?: number;
     /**
      * 
      * @type {number}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
-    siriRouteId?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof SiriRideWithRelatedPydanticModel
-     */
-    journeyRef?: string;
-    /**
-     * 
-     * @type {Date}
-     * @memberof SiriRideWithRelatedPydanticModel
-     */
-    scheduledStartTime?: Date;
-    /**
-     * 
-     * @type {string}
-     * @memberof SiriRideWithRelatedPydanticModel
-     */
-    vehicleRef?: string;
-    /**
-     * 
-     * @type {Date}
-     * @memberof SiriRideWithRelatedPydanticModel
-     */
-    updatedFirstLastVehicleLocations?: Date;
+    gtfsStopId?: number;
     /**
      * 
      * @type {number}
-     * @memberof SiriRideWithRelatedPydanticModel
-     */
-    firstVehicleLocationId?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof SiriRideWithRelatedPydanticModel
-     */
-    lastVehicleLocationId?: number;
-    /**
-     * 
-     * @type {Date}
-     * @memberof SiriRideWithRelatedPydanticModel
-     */
-    updatedDurationMinutes?: Date;
-    /**
-     * 
-     * @type {number}
-     * @memberof SiriRideWithRelatedPydanticModel
-     */
-    durationMinutes?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof SiriRideWithRelatedPydanticModel
-     */
-    journeyGtfsRideId?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof SiriRideWithRelatedPydanticModel
-     */
-    routeGtfsRideId?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRideId?: number;
     /**
      * 
-     * @type {number}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @type {Date}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
-    siriRouteLineRef?: number;
+    arrivalTime?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    departureTime?: Date;
     /**
      * 
      * @type {number}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
-    siriRouteOperatorRef?: number;
+    stopSequence?: number;
     /**
      * 
      * @type {number}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    pickupType?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    dropOffType?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    shapeDistTraveled?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRideGtfsRouteId?: number;
     /**
      * 
      * @type {string}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRideJourneyRef?: string;
     /**
      * 
      * @type {Date}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRideStartTime?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRideEndTime?: Date;
     /**
      * 
      * @type {Date}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    gtfsStopDate?: Date;
+    /**
+     * 
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    gtfsStopCode?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    gtfsStopLat?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    gtfsStopLon?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    gtfsStopName?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    gtfsStopCity?: string;
+    /**
+     * 
+     * @type {Date}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteDate?: Date;
     /**
      * 
      * @type {number}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteLineRef?: number;
     /**
      * 
      * @type {number}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteOperatorRef?: number;
     /**
      * 
      * @type {string}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteRouteShortName?: string;
     /**
      * 
      * @type {string}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteRouteLongName?: string;
     /**
      * 
      * @type {string}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteRouteMkt?: string;
     /**
      * 
      * @type {string}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteRouteDirection?: string;
     /**
      * 
      * @type {string}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteRouteAlternative?: string;
     /**
      * 
      * @type {string}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteAgencyName?: string;
     /**
      * 
      * @type {string}
-     * @memberof SiriRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteRouteType?: string;
 }
 
 /**
- * Check if a given object implements the SiriRideWithRelatedPydanticModel interface.
+ * Check if a given object implements the GtfsRideStopWithRelatedPydanticModel interface.
  */
-export function instanceOfSiriRideWithRelatedPydanticModel(value: object): boolean {
+export function instanceOfGtfsRideStopWithRelatedPydanticModel(value: object): boolean {
     let isInstance = true;
 
     return isInstance;
 }
 
-export function SiriRideWithRelatedPydanticModelFromJSON(json: any): SiriRideWithRelatedPydanticModel {
-    return SiriRideWithRelatedPydanticModelFromJSONTyped(json, false);
+export function GtfsRideStopWithRelatedPydanticModelFromJSON(json: any): GtfsRideStopWithRelatedPydanticModel {
+    return GtfsRideStopWithRelatedPydanticModelFromJSONTyped(json, false);
 }
 
-export function SiriRideWithRelatedPydanticModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): SiriRideWithRelatedPydanticModel {
+export function GtfsRideStopWithRelatedPydanticModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): GtfsRideStopWithRelatedPydanticModel {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         
         'id': !exists(json, 'id') ? undefined : json['id'],
-        'siriRouteId': !exists(json, 'siri_route_id') ? undefined : json['siri_route_id'],
-        'journeyRef': !exists(json, 'journey_ref') ? undefined : json['journey_ref'],
-        'scheduledStartTime': !exists(json, 'scheduled_start_time') ? undefined : (new Date(json['scheduled_start_time'])),
-        'vehicleRef': !exists(json, 'vehicle_ref') ? undefined : json['vehicle_ref'],
-        'updatedFirstLastVehicleLocations': !exists(json, 'updated_first_last_vehicle_locations') ? undefined : (new Date(json['updated_first_last_vehicle_locations'])),
-        'firstVehicleLocationId': !exists(json, 'first_vehicle_location_id') ? undefined : json['first_vehicle_location_id'],
-        'lastVehicleLocationId': !exists(json, 'last_vehicle_location_id') ? undefined : json['last_vehicle_location_id'],
-        'updatedDurationMinutes': !exists(json, 'updated_duration_minutes') ? undefined : (new Date(json['updated_duration_minutes'])),
-        'durationMinutes': !exists(json, 'duration_minutes') ? undefined : json['duration_minutes'],
-        'journeyGtfsRideId': !exists(json, 'journey_gtfs_ride_id') ? undefined : json['journey_gtfs_ride_id'],
-        'routeGtfsRideId': !exists(json, 'route_gtfs_ride_id') ? undefined : json['route_gtfs_ride_id'],
+        'gtfsStopId': !exists(json, 'gtfs_stop_id') ? undefined : json['gtfs_stop_id'],
         'gtfsRideId': !exists(json, 'gtfs_ride_id') ? undefined : json['gtfs_ride_id'],
-        'siriRouteLineRef': !exists(json, 'siri_route__line_ref') ? undefined : json['siri_route__line_ref'],
-        'siriRouteOperatorRef': !exists(json, 'siri_route__operator_ref') ? undefined : json['siri_route__operator_ref'],
+        'arrivalTime': !exists(json, 'arrival_time') ? undefined : (new Date(json['arrival_time'])),
+        'departureTime': !exists(json, 'departure_time') ? undefined : (new Date(json['departure_time'])),
+        'stopSequence': !exists(json, 'stop_sequence') ? undefined : json['stop_sequence'],
+        'pickupType': !exists(json, 'pickup_type') ? undefined : json['pickup_type'],
+        'dropOffType': !exists(json, 'drop_off_type') ? undefined : json['drop_off_type'],
+        'shapeDistTraveled': !exists(json, 'shape_dist_traveled') ? undefined : json['shape_dist_traveled'],
         'gtfsRideGtfsRouteId': !exists(json, 'gtfs_ride__gtfs_route_id') ? undefined : json['gtfs_ride__gtfs_route_id'],
         'gtfsRideJourneyRef': !exists(json, 'gtfs_ride__journey_ref') ? undefined : json['gtfs_ride__journey_ref'],
         'gtfsRideStartTime': !exists(json, 'gtfs_ride__start_time') ? undefined : (new Date(json['gtfs_ride__start_time'])),
         'gtfsRideEndTime': !exists(json, 'gtfs_ride__end_time') ? undefined : (new Date(json['gtfs_ride__end_time'])),
+        'gtfsStopDate': !exists(json, 'gtfs_stop__date') ? undefined : (new Date(json['gtfs_stop__date'])),
+        'gtfsStopCode': !exists(json, 'gtfs_stop__code') ? undefined : json['gtfs_stop__code'],
+        'gtfsStopLat': !exists(json, 'gtfs_stop__lat') ? undefined : json['gtfs_stop__lat'],
+        'gtfsStopLon': !exists(json, 'gtfs_stop__lon') ? undefined : json['gtfs_stop__lon'],
+        'gtfsStopName': !exists(json, 'gtfs_stop__name') ? undefined : json['gtfs_stop__name'],
+        'gtfsStopCity': !exists(json, 'gtfs_stop__city') ? undefined : json['gtfs_stop__city'],
         'gtfsRouteDate': !exists(json, 'gtfs_route__date') ? undefined : (new Date(json['gtfs_route__date'])),
         'gtfsRouteLineRef': !exists(json, 'gtfs_route__line_ref') ? undefined : json['gtfs_route__line_ref'],
         'gtfsRouteOperatorRef': !exists(json, 'gtfs_route__operator_ref') ? undefined : json['gtfs_route__operator_ref'],
@@ -246,7 +246,7 @@ export function SiriRideWithRelatedPydanticModelFromJSONTyped(json: any, ignoreD
     };
 }
 
-export function SiriRideWithRelatedPydanticModelToJSON(value?: SiriRideWithRelatedPydanticModel | null): any {
+export function GtfsRideStopWithRelatedPydanticModelToJSON(value?: GtfsRideStopWithRelatedPydanticModel | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -256,24 +256,24 @@ export function SiriRideWithRelatedPydanticModelToJSON(value?: SiriRideWithRelat
     return {
         
         'id': value.id,
-        'siri_route_id': value.siriRouteId,
-        'journey_ref': value.journeyRef,
-        'scheduled_start_time': value.scheduledStartTime === undefined ? undefined : (value.scheduledStartTime.toISOString()),
-        'vehicle_ref': value.vehicleRef,
-        'updated_first_last_vehicle_locations': value.updatedFirstLastVehicleLocations === undefined ? undefined : (value.updatedFirstLastVehicleLocations.toISOString()),
-        'first_vehicle_location_id': value.firstVehicleLocationId,
-        'last_vehicle_location_id': value.lastVehicleLocationId,
-        'updated_duration_minutes': value.updatedDurationMinutes === undefined ? undefined : (value.updatedDurationMinutes.toISOString()),
-        'duration_minutes': value.durationMinutes,
-        'journey_gtfs_ride_id': value.journeyGtfsRideId,
-        'route_gtfs_ride_id': value.routeGtfsRideId,
+        'gtfs_stop_id': value.gtfsStopId,
         'gtfs_ride_id': value.gtfsRideId,
-        'siri_route__line_ref': value.siriRouteLineRef,
-        'siri_route__operator_ref': value.siriRouteOperatorRef,
+        'arrival_time': value.arrivalTime === undefined ? undefined : (value.arrivalTime.toISOString()),
+        'departure_time': value.departureTime === undefined ? undefined : (value.departureTime.toISOString()),
+        'stop_sequence': value.stopSequence,
+        'pickup_type': value.pickupType,
+        'drop_off_type': value.dropOffType,
+        'shape_dist_traveled': value.shapeDistTraveled,
         'gtfs_ride__gtfs_route_id': value.gtfsRideGtfsRouteId,
         'gtfs_ride__journey_ref': value.gtfsRideJourneyRef,
         'gtfs_ride__start_time': value.gtfsRideStartTime === undefined ? undefined : (value.gtfsRideStartTime.toISOString()),
         'gtfs_ride__end_time': value.gtfsRideEndTime === undefined ? undefined : (value.gtfsRideEndTime.toISOString()),
+        'gtfs_stop__date': value.gtfsStopDate === undefined ? undefined : (value.gtfsStopDate.toISOString().substr(0,10)),
+        'gtfs_stop__code': value.gtfsStopCode,
+        'gtfs_stop__lat': value.gtfsStopLat,
+        'gtfs_stop__lon': value.gtfsStopLon,
+        'gtfs_stop__name': value.gtfsStopName,
+        'gtfs_stop__city': value.gtfsStopCity,
         'gtfs_route__date': value.gtfsRouteDate === undefined ? undefined : (value.gtfsRouteDate.toISOString().substr(0,10)),
         'gtfs_route__line_ref': value.gtfsRouteLineRef,
         'gtfs_route__operator_ref': value.gtfsRouteOperatorRef,

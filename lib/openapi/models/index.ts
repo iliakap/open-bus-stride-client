@@ -3,6 +3,7 @@
 export * from './GtfsAgencyPydanticModel';
 export * from './GtfsRidePydanticModel';
 export * from './GtfsRideStopPydanticModel';
+export * from './GtfsRideStopWithRelatedPydanticModel';
 export * from './GtfsRideWithRelatedPydanticModel';
 export * from './GtfsRidesAggGroupByPydanticModel';
 export * from './GtfsRidesAggPydanticModel';

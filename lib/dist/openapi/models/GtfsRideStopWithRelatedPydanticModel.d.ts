@@ -12,104 +12,188 @@
 /**
  *
  * @export
- * @interface GtfsRideWithRelatedPydanticModel
+ * @interface GtfsRideStopWithRelatedPydanticModel
  */
-export interface GtfsRideWithRelatedPydanticModel {
+export interface GtfsRideStopWithRelatedPydanticModel {
     /**
      *
      * @type {number}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     id?: number;
     /**
      *
      * @type {number}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
-    gtfsRouteId?: number;
+    gtfsStopId?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    gtfsRideId?: number;
+    /**
+     *
+     * @type {Date}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    arrivalTime?: Date;
+    /**
+     *
+     * @type {Date}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    departureTime?: Date;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    stopSequence?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    pickupType?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    dropOffType?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    shapeDistTraveled?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    gtfsRideGtfsRouteId?: number;
     /**
      *
      * @type {string}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
-    journeyRef?: string;
+    gtfsRideJourneyRef?: string;
     /**
      *
      * @type {Date}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
-    startTime?: Date;
+    gtfsRideStartTime?: Date;
     /**
      *
      * @type {Date}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
-    endTime?: Date;
+    gtfsRideEndTime?: Date;
     /**
      *
      * @type {Date}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    gtfsStopDate?: Date;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    gtfsStopCode?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    gtfsStopLat?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    gtfsStopLon?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    gtfsStopName?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
+     */
+    gtfsStopCity?: string;
+    /**
+     *
+     * @type {Date}
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteDate?: Date;
     /**
      *
      * @type {number}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteLineRef?: number;
     /**
      *
      * @type {number}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteOperatorRef?: number;
     /**
      *
      * @type {string}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteRouteShortName?: string;
     /**
      *
      * @type {string}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteRouteLongName?: string;
     /**
      *
      * @type {string}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteRouteMkt?: string;
     /**
      *
      * @type {string}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteRouteDirection?: string;
     /**
      *
      * @type {string}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteRouteAlternative?: string;
     /**
      *
      * @type {string}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteAgencyName?: string;
     /**
      *
      * @type {string}
-     * @memberof GtfsRideWithRelatedPydanticModel
+     * @memberof GtfsRideStopWithRelatedPydanticModel
      */
     gtfsRouteRouteType?: string;
 }
 /**
- * Check if a given object implements the GtfsRideWithRelatedPydanticModel interface.
+ * Check if a given object implements the GtfsRideStopWithRelatedPydanticModel interface.
  */
-export declare function instanceOfGtfsRideWithRelatedPydanticModel(value: object): boolean;
-export declare function GtfsRideWithRelatedPydanticModelFromJSON(json: any): GtfsRideWithRelatedPydanticModel;
-export declare function GtfsRideWithRelatedPydanticModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): GtfsRideWithRelatedPydanticModel;
-export declare function GtfsRideWithRelatedPydanticModelToJSON(value?: GtfsRideWithRelatedPydanticModel | null): any;
+export declare function instanceOfGtfsRideStopWithRelatedPydanticModel(value: object): boolean;
+export declare function GtfsRideStopWithRelatedPydanticModelFromJSON(json: any): GtfsRideStopWithRelatedPydanticModel;
+export declare function GtfsRideStopWithRelatedPydanticModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): GtfsRideStopWithRelatedPydanticModel;
+export declare function GtfsRideStopWithRelatedPydanticModelToJSON(value?: GtfsRideStopWithRelatedPydanticModel | null): any;

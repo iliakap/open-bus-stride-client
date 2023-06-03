@@ -7,6 +7,7 @@ index.ts
 models/GtfsAgencyPydanticModel.ts
 models/GtfsRidePydanticModel.ts
 models/GtfsRideStopPydanticModel.ts
+models/GtfsRideStopWithRelatedPydanticModel.ts
 models/GtfsRideWithRelatedPydanticModel.ts
 models/GtfsRidesAggGroupByPydanticModel.ts
 models/GtfsRidesAggPydanticModel.ts
